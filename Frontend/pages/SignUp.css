@@ -1,0 +1,25 @@
+.email input{
+    width: 20rem;
+    height: 2rem;
+    border: 1px solid black;
+}
+.password{
+    padding: 20px;
+    position: relative;
+    
+}
+
+.eye{
+     height: 20px;
+    width: 20px;
+    position: absolute;
+    right: 30px; 
+    top: 60%;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+}
+.span{
+    color: red;
+    cursor: pointer;
+}

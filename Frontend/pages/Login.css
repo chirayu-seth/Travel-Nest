@@ -1,0 +1,37 @@
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+h1{
+    text-align: center;
+}
+.username{
+    padding: 20px;
+    
+}
+.username input{
+    width: 20rem;
+    height: 2rem;
+    border: 1px solid black;
+}
+
+.password input{
+    width: 20rem;
+    height: 2rem;
+    border: 1px solid black;
+}
+button{
+    padding: 5px;
+    margin-top: 10px;
+   
+    
+    
+}
+
+.span{
+    color: red;
+    cursor: pointer;
+}

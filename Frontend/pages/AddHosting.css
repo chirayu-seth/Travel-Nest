@@ -1,0 +1,26 @@
+.new{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    
+}
+
+.new input{
+    width: 40rem;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.price-country-row{
+    display: flex;
+    justify-content: center;
+}
+.price-country-row input{
+    width: 10rem;
+   
+
+}

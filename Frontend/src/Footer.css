@@ -1,0 +1,39 @@
+.container-foot{
+   
+       background-color: rgb(234, 230, 230);
+       
+}
+
+.heading h2{
+   padding-top: 30px;
+   margin-left: 20px;
+
+}
+
+.heading p{
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+ h4{
+    margin-top: 1.5rem;
+ }
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.row ul{
+   list-style: none;
+}
+.row li{
+   display: flex;
+   flex-direction: column;
+   gap: 3px;
+   margin: 30px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
