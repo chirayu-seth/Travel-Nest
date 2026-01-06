@@ -10,7 +10,7 @@ export function AuthProvider({ children }) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/verify", { withCredentials: true })
+      .get("https://travel-nest-rnob.onrender.com/verify", { withCredentials: true })
       .then(res => {
         if (res.data.status) setUser(res.data.user);
         else setUser(null);
