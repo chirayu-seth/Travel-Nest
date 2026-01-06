@@ -19,7 +19,7 @@ export default function SignUp() {
 try{
    e.preventDefault(); 
   setError("");
-  const res= await axios.post("http://localhost:5000/signup",{ username, email, password}, {withCredentials:true})
+  const res= await axios.post("https://travel-nest-rnob.onrender.com/signup",{ username, email, password}, {withCredentials:true})
   
   
   navigate("/");

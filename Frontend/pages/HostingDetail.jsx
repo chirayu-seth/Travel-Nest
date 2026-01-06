@@ -13,13 +13,13 @@ export default function HostingDetail() {
    const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/Hosting/${id}`)
+    axios.get(`https://travel-nest-rnob.onrender.com/Hosting/${id}`)
       .then((res) => setHome(res.data))
       .catch((err) => console.error(err));
   }, [id]);
 
   const handleDelete=async()=>{
-  await axios.delete(`http://localhost:5000/Hosting/${id}`)
+  await axios.delete(`https://travel-nest-rnob.onrender.com/Hosting/${id}`)
   
   navigate("/");
    toast.success("Hosting Deleted!")

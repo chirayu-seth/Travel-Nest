@@ -17,7 +17,7 @@ export default function EditHosting() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/Hosting/${id}`)
+    axios.get(`https://travel-nest-rnob.onrender.com/Hosting/${id}`)
       .then(res => setFormData(res.data))
       .catch(console.error);
   }, [id]);
@@ -42,7 +42,7 @@ export default function EditHosting() {
       if (imageFile) {
         const imgForm = new FormData();
         imgForm.append("image", imageFile);
-        const imgRes = await axios.post("http://localhost:5000/upload", imgForm);
+        const imgRes = await axios.post("https://travel-nest-rnob.onrender.com/upload", imgForm);
         imageUrl = imgRes.data.url;
       }
 
@@ -50,7 +50,7 @@ export default function EditHosting() {
         ...formData,
         image: { url: imageUrl }
       };
-      await axios.put(`http://localhost:5000/Hosting/${id}`, payload);
+      await axios.put(`https://travel-nest-rnob.onrender.com/Hosting/${id}`, payload);
      
       navigate(`/Hosting/${id}`);
       toast.success("Hosting updated!") 

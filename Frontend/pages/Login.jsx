@@ -17,9 +17,9 @@ export default function Login() {
         e.preventDefault();
 try{
   setError("");
-  await axios.post("http://localhost:5000/login",{ email, password}, {withCredentials:true})
+  await axios.post("https://travel-nest-rnob.onrender.com/login",{ email, password}, {withCredentials:true})
 
-   const res = await axios.get("http://localhost:5000/verify", { withCredentials: true });
+   const res = await axios.get("https://travel-nest-rnob.onrender.com/verify", { withCredentials: true });
       console.log("Verify response:", res.data); // ✅ Debug line
       if (res.data.status) {
         setUser(res.data.user); // ✅ This updates Navbar immediately

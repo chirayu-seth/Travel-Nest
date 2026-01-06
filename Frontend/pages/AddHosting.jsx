@@ -31,7 +31,7 @@ export default function AddHosting() {
     try {
       const imgForm = new FormData();
       imgForm.append("image", imageFile);
-      const imgRes = await axios.post("http://localhost:5000/upload", imgForm);
+      const imgRes = await axios.post("https://travel-nest-rnob.onrender.com/upload", imgForm);
       const imageUrl = imgRes.data.url;
 
       const payload = {
@@ -39,7 +39,7 @@ export default function AddHosting() {
         image: { url: imageUrl },
       };
 
-      await axios.post("http://localhost:5000/Hosting/new", payload , {withCredentials:true});
+      await axios.post("https://travel-nest-rnob.onrender.com/Hosting/new", payload , {withCredentials:true});
       
       setFormData({
         title: "",

@@ -14,7 +14,7 @@ import {Link} from "react-router-dom"
 export default function Home(){
 const [allHosting, setAllHosting]=useState([]);
 useEffect(()=>{
-  axios.get("http://localhost:5000/allHosting").then((res)=>{
+  axios.get("https://travel-nest-rnob.onrender.com/allHosting").then((res)=>{
     setAllHosting(res.data)
   })
 },[]);
