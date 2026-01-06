@@ -18,7 +18,7 @@ exports.signup = async (req,res)=>{
     password: hash
 })
  const token = jwt.sign({email, id: createUser._id}, process.env.JWT_SECRET, {expiresIn:"7d"})
-  res.cookie("token", token, { httpOnly: true ,sameSite: "strict", maxAge:7 * 24 * 60 * 60 * 1000 }).json({ message: "Signed up" });
+  res.cookie("token", token, { httpOnly: true, secure: true, sameSite: "none", maxAge:7 * 24 * 60 * 60 * 1000 }).json({ message: "Signed up" });
 });
 
       }) 
@@ -47,8 +47,8 @@ exports.login = async (req, res) => {
 
     res.cookie("token", token, {
       httpOnly: true,
-       secure: process.env.NODE_ENV === "production",
-      sameSite: "strict",
+       secure: true,
+      sameSite: "none",
       maxAge:7 * 24 * 60 * 60 * 1000
     });
 
